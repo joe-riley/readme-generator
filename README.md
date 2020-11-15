@@ -1,4 +1,4 @@
-# Your Project Title
+# Readme Generator
 
 ## Description 
 Creates a command-line application that dynamically generates a professional README.md file from a user's input using the [Inquirer package](https://www.npmjs.com/package/inquirer). Readme file is based off of the [Guide to a Professional README](https://github.com/coding-boot-camp/potential-enigma/blob/master/readme-guide.md) that has everything a high-quality, professional README should contain.
