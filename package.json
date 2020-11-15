@@ -1,0 +1,32 @@
+{
+  "name": "readme-generator",
+  "version": "0.0.1",
+  "description": "Creates a command-line application that dynamically generates a professional README.md file from a user's input using the Inquirer Package.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/joe-riley/readme-generator.git"
+  },
+  "keywords": [
+    "cli",
+    "infrastructure",
+    "'new",
+    "projects'",
+    "'give",
+    "me",
+    "an",
+    "A'"
+  ],
+  "author": "Joe Riley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joe-riley/readme-generator/issues"
+  },
+  "homepage": "https://github.com/joe-riley/readme-generator#readme",
+  "dependencies": {
+    "inquirer": "^7.3.3"
+  }
+}
