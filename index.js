@@ -5,42 +5,51 @@ const questions = [
   {
     type: 'input',
     name: 'full_name',
-    message: "Please enter your full name (for licensing purposes)",
+    message: "Please enter your full name for licensing purposes. ",
   },
   {
     type: 'input',
     name: 'title',
-    message: "Please enter your project title",
+    message: "Please enter your project title. ",
   },
   {
     type: 'input',
     name: 'name',
-    message: 'Describe your project\'s purpose',
+    message: 'Describe your project\'s purpose. ',
   },
   {
     type: 'input',
     name: 'installation',
-    message: 'Input instalation instructions',
+    message: 'Input instalation instructions. ',
   },
   {
     type: 'input',
     name: 'usage',
-    message: 'Explain how one uses the application',
+    message: 'Explain how one uses the application. ',
   },
   {
-    type: 'input',
+    type: 'list',
     name: 'contribution',
-    message: 'What are the contribution guidelines',
+    message: 'What are the contribution guidelines? ',
+    choices: [
+      new inquirer.Separator('=== Contributer Rules ==='),
+      {
+        name: 'Contributor Covenant',
+      },
+      {
+        name: 'Write your own',
+      },
+    ]
   },
   {
     type: 'input',
     name: 'test',
-    message: 'How are the unit tests run',
+    message: 'How are the unit tests run? ',
   },
   {
     type: 'list',
     name: 'license',
-    message: "What license is the application protected by",
+    message: "What license is the application protected by? ",
     choices: [
       new inquirer.Separator('=== Licenses ==='),
       {
@@ -72,12 +81,12 @@ const questions = [
   {
     type: 'input',
     name: 'github_user',
-    message: 'What is your github username?'
+    message: 'What is your github username? '
   },
   {
     type: 'input',
     name: 'email',
-    message: 'What is the contact email for the project?'
+    message: 'What is the contact email for the project? '
   },
 ];
 
