@@ -1,4 +1,5 @@
 const inquirer = require('inquirer');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 // array of questions for user
 const questions = [
@@ -14,7 +15,7 @@ const questions = [
   },
   {
     type: 'input',
-    name: 'name',
+    name: 'description',
     message: 'Describe your project\'s purpose. ',
   },
   {
@@ -29,7 +30,7 @@ const questions = [
   },
   {
     type: 'list',
-    name: 'contribution',
+    name: 'contributing',
     message: 'What are the contribution guidelines? ',
     choices: [
       new inquirer.Separator('=== Contributer Rules ==='),
@@ -43,7 +44,7 @@ const questions = [
   },
   {
     type: 'input',
-    name: 'test',
+    name: 'tests',
     message: 'How are the unit tests run? ',
   },
   {
@@ -97,7 +98,7 @@ function writeToFile(fileName, data) {
 // function to initialize program
 inquirer.prompt(questions).then((answers) => {
   console.log(answers);
-
+  generateMarkdown(answers);
 });
 
 // function call to initialize program

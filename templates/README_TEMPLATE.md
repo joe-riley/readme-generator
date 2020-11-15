@@ -22,11 +22,11 @@
 
 ## License
 
-[template_usage]
+[template_license]
 
 ## Contributing
 
-[template_usage]
+[template_contributing]
 
 ## Tests
 
@@ -34,4 +34,7 @@
 
 ## Questions
 
-[template_questions]
+* Who is the project owner? ([template_github_user])[https://github.com/[template_github_user]/]
+
+* How can the owner be contacted? <[template_email]>
+ 
