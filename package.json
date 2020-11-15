@@ -28,5 +28,8 @@
   "homepage": "https://github.com/joe-riley/readme-generator#readme",
   "dependencies": {
     "inquirer": "^7.3.3"
+  },
+  "devDependencies": {
+    "jasmine": "^3.6.3"
   }
 }

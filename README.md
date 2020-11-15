@@ -28,3 +28,6 @@ You are able to clone or fork the repository and contribute in accordance with [
 
 ## Tests
 The project uses [Jasmine](https://www.npmjs.com/package/jasmine) as a unit test runner.
+
+## Questions
+Is this a faq for the project?
