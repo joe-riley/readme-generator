@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
+const generateLicense = require('./utils/generateLicenses');
 
 // array of questions for user
 const questions = [
@@ -97,8 +98,9 @@ function writeToFile(fileName, data) {
 
 // function to initialize program
 inquirer.prompt(questions).then((answers) => {
-  console.log(answers);
   generateMarkdown(answers);
+  generateLicense(answers.license, answers.full_name);
+
 });
 
 // function call to initialize program

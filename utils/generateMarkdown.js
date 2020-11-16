@@ -17,7 +17,9 @@ function generateMarkdown(data) {
       .replace('[template_github_user]', data.github_user)
       .replace('[template_email]', data.email);
 
-    fs.writeFile('./output/README.md', filledOutReadme) ;
+    fs.writeFile('./output/README.md', filledOutReadme, (err) => { 
+      if (err) throw err;
+    });
 
   } catch (error) {
     console.log(error);
