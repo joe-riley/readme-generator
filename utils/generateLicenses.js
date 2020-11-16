@@ -1,11 +1,5 @@
 const fs = require('fs')
 
-function generateMitLicense(fullName) {
-    const mitTemplate = fs.readFileSync('./templates/licenses/mit.txt').toString();
-
-
-}
-
 function generateLicense(licenseName, fullName) {
   const currentYear = new Date().getFullYear();
   const licenseMap = {

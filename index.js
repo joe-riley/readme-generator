@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
 const generateLicense = require('./utils/generateLicenses');
+const generateCodeOfConduct = require('./utils/generateCodeofConduct');
 
 // array of questions for user
 const questions = [
@@ -92,16 +93,9 @@ const questions = [
   },
 ];
 
-// function to write README file
-function writeToFile(fileName, data) {
-}
-
-// function to initialize program
 inquirer.prompt(questions).then((answers) => {
   generateMarkdown(answers);
   generateLicense(answers.license, answers.full_name);
+  generateCodeOfConduct(answers.contributing);
 
 });
-
-// function call to initialize program
-// init();
