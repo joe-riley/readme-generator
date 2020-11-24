@@ -104,7 +104,7 @@ const questions = [
 prompt(questions).then((answers) => {
   let timestamp = Date.now();
   console.log(answers.title);
-  let targetDirectory = `${outputDirectory}/${answers.title.replace(' ', '_')}_${timestamp}`
+  let targetDirectory = `${outputDirectory}/${answers.title.replace(/ /g, '_')}_${timestamp}`
 
   if (!fs.existsSync(targetDirectory)){
       fs.mkdirSync(targetDirectory);
