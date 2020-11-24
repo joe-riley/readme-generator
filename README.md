@@ -19,7 +19,8 @@ Creates a command-line application that dynamically generates a professional REA
 * Run `node index.js` from the root of the project 
 * Answer the questions to fill in the README.
 
-A SCREENSHOT OF A CLI APP TODO
+See how to do it in this totally not lame video that you might have to watch a few times loop to see everything you want to.
+<iframe src="https://drive.google.com/file/d/1M4iTKFlaeex7PDQ6UOVDUguaVTEDaiyF/preview" width="640" height="480"></iframe>
 
 ## Contributing
 You are able to clone or fork the repository and contribute in accordance with [Contributor Covenant](code_of_conduct.md)
