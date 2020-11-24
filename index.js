@@ -100,10 +100,16 @@ const questions = [
   },
 ];
 
-let timestamp = new Date.now();
-let targetDirectory = `${outputDirectory}/${answers.title.replace(' ', '_')}_${timestamp}`
 
 prompt(questions).then((answers) => {
+  let timestamp = Date.now();
+  console.log(answers.title);
+  let targetDirectory = `${outputDirectory}/${answers.title.replace(' ', '_')}_${timestamp}`
+
+  if (!fs.existsSync(targetDirectory)){
+      fs.mkdirSync(targetDirectory);
+  }
+
   generateMarkdown(answers, targetDirectory);
   generateLicense(answers.license, answers.full_name, targetDirectory);
   generateCodeOfConduct(answers.contributing, targetDirectory);
