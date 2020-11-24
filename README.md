@@ -19,7 +19,7 @@ Creates a command-line application that dynamically generates a professional REA
 * Run `node index.js` from the root of the project 
 * Answer the questions to fill in the README.
 
-See how to do it in this [totally not lame video](https://drive.google.com/file/d/1M4iTKFlaeex7PDQ6UOVDUguaVTEDaiyF/preview) that you might have to watch a few times loop to see everything you want to.
+See how to do it in this [totally not lame video](https://drive.google.com/file/d/1M4iTKFlaeex7PDQ6UOVDUguaVTEDaiyF/preview). 
 
 
 ## Contributing
