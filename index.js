@@ -1,8 +1,8 @@
-import fs from 'fs';
-import { Separator, prompt } from 'inquirer';
-import generateMarkdown from './utils/generateMarkdown';
-import generateLicense from './utils/generateLicenses';
-import generateCodeOfConduct from './utils/generateCodeofConduct';
+const fs = require('fs');
+const { Separator, prompt } = require('inquirer');
+const generateMarkdown = require('./utils/generateMarkdown');
+const generateLicense = require('./utils/generateLicenses');
+const generateCodeOfConduct = require('./utils/generateCodeofConduct');
 
 
 if (!fs.existsSync('./output')){
