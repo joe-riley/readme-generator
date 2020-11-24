@@ -1,7 +1,7 @@
 const fs = require('fs')
 
 // function to generate markdown for README
-function generateMarkdown(data) {
+function generateMarkdown(data, targetDirectory) {
   const readmeTemplate = fs.readFileSync('./templates/README_TEMPLATE.md').toString();
   
   try {
@@ -17,7 +17,7 @@ function generateMarkdown(data) {
       .replace('[template_github_user]', data.github_user)
       .replace('[template_email]', data.email);
 
-    fs.writeFile('./output/README.md', filledOutReadme, (err) => { 
+    fs.writeFile(`${targetDirectory}/README.md`, filledOutReadme, (err) => { 
       if (err) throw err;
     });
 

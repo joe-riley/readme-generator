@@ -5,8 +5,10 @@ const generateLicense = require('./utils/generateLicenses');
 const generateCodeOfConduct = require('./utils/generateCodeofConduct');
 
 
-if (!fs.existsSync('./output')){
-    fs.mkdirSync('./output');
+let outputDirectory = './output';
+
+if (!fs.existsSync(outputDirectory)){
+    fs.mkdirSync(outputDirectory);
 }
 
 const questions = [
@@ -98,9 +100,12 @@ const questions = [
   },
 ];
 
+let timestamp = new Date.now();
+let targetDirectory = `${outputDirectory}/${answers.title.replace(' ', '_')}_${timestamp}`
+
 prompt(questions).then((answers) => {
-  generateMarkdown(answers);
-  generateLicense(answers.license, answers.full_name);
-  generateCodeOfConduct(answers.contributing);
+  generateMarkdown(answers, targetDirectory);
+  generateLicense(answers.license, answers.full_name, targetDirectory);
+  generateCodeOfConduct(answers.contributing, targetDirectory);
 
 });

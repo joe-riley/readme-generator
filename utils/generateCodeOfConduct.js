@@ -1,6 +1,6 @@
 const fs = require('fs')
 
-function generateCodeOfConduct(codeOfConduct) {
+function generateCodeOfConduct(codeOfConduct, targetDirectory) {
 
   if (codeOfConduct === 'Contributor Covenant') {
     const codeOfConductTemplate = fs.readFileSync(
@@ -10,7 +10,7 @@ function generateCodeOfConduct(codeOfConduct) {
 
     try {
       fs.writeFile(
-        `./output/CONTRIBUTOR_COVENANT.md`
+        `${targetDirectory}/CONTRIBUTOR_COVENANT.md`
         , codeOfConductTemplate
         , (err) => { 
           if (err) throw err;

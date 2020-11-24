@@ -1,6 +1,6 @@
 const fs = require('fs')
 
-function generateLicense(licenseName, fullName) {
+function generateLicense(licenseName, fullName, targetDirectory) {
   const currentYear = new Date().getFullYear();
   const licenseMap = {
     'Apache License 2.0': 'apache_l2-0.txt',
@@ -24,7 +24,7 @@ function generateLicense(licenseName, fullName) {
       .replace('[year]', currentYear);
 
       fs.writeFile(
-        `./output/${licenseMap[licenseName].split('.')[0].toUpperCase()}.LICENSE`
+        `${targetDirectory}/${licenseMap[licenseName].split('.')[0].toUpperCase()}.LICENSE`
         , license
         , (err) => { 
           if (err) throw err;
