@@ -1,9 +1,14 @@
-const inquirer = require('inquirer');
-const generateMarkdown = require('./utils/generateMarkdown');
-const generateLicense = require('./utils/generateLicenses');
-const generateCodeOfConduct = require('./utils/generateCodeofConduct');
+import fs from 'fs';
+import { Separator, prompt } from 'inquirer';
+import generateMarkdown from './utils/generateMarkdown';
+import generateLicense from './utils/generateLicenses';
+import generateCodeOfConduct from './utils/generateCodeofConduct';
 
-// array of questions for user
+
+if (!fs.existsSync('./output')){
+    fs.mkdirSync('./output');
+}
+
 const questions = [
   {
     type: 'input',
@@ -35,7 +40,7 @@ const questions = [
     name: 'contributing',
     message: 'What are the contribution guidelines? ',
     choices: [
-      new inquirer.Separator('=== Contributer Rules ==='),
+      new Separator('=== Contributer Rules ==='),
       {
         name: 'Contributor Covenant',
       },
@@ -54,7 +59,7 @@ const questions = [
     name: 'license',
     message: "What license is the application protected by? ",
     choices: [
-      new inquirer.Separator('=== Licenses ==='),
+      new Separator('=== Licenses ==='),
       {
         name: 'GNU AGPLv3',
       },
@@ -93,7 +98,7 @@ const questions = [
   },
 ];
 
-inquirer.prompt(questions).then((answers) => {
+prompt(questions).then((answers) => {
   generateMarkdown(answers);
   generateLicense(answers.license, answers.full_name);
   generateCodeOfConduct(answers.contributing);
